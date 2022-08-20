@@ -1,3 +1,7 @@
+/**
+ * A callback function that is called when a user signs in.
+ * @param googleUser - The GoogleUser object that represents the user who just signed in.
+ */
 function onSignIn(googleUser) {
     // Useful data for your client-side scripts:
     var profile = googleUser.getBasicProfile();
