@@ -5,7 +5,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>eMercado - Todo lo que busques está aquí</title>
-  
+  <meta name="google-signin-client_id" content="881197791735-e8sk721hitui52doed2t21q94qf98j0p.apps.googleusercontent.com">
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
@@ -19,10 +19,26 @@
 <body>
   <main class="mt-5">
     <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
+      <!-- <div class="alert alert-danger text-center" role="alert">
         <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
+      </div> -->
+      <div><img src="img/login.png" alt=""></div>
+      <div class="form-floating mb-3" id="formLogin">
+        <input type="email" class="form-control" id="floatingInput" placeholder="nombre@ejemplo.com" required>
+        <label for="floatingInput">Email</label>
       </div>
+      <div class="form-floating">
+        <input type="password" class="form-control" id="floatingPassword" placeholder="Contraseña" required>
+        <label for="floatingPassword">Contraseña</label>
+      </div>
+      <p><input type="checkbox" name="recordar">Recordarme</p>
+      <button type="submit" class="btn btn-primary btn-lg" id="boton">Enviar</button>
+      
+      <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+    
     </div>
+
+    
   </main>
   <footer class="text-muted">
     <div class="container">
@@ -35,6 +51,8 @@
     </div>
   </footer>
   <script src="js/login.js"></script>
+  <script src="js/google.js"></script>
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
 </body>
 
 </html>
