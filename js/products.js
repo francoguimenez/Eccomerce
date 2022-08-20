@@ -1,6 +1,8 @@
 const url = 'https://japceibal.github.io/emercado-api/cats_products/101.json';
 
 
+/* A function that is called when the page loads. It loops through the productsArray and creates a new
+div for each product. The divs are added to the prodCont div. */
 document.addEventListener("DOMContentLoaded", function(e){
     getJSONData(url).then(function(result){
         if (result.status === "ok"){
@@ -20,6 +22,10 @@ document.addEventListener("DOMContentLoaded", function(e){
 //     });
 // });
 
+/**
+ * The function showProducts() is called when the page loads. It loops through the productsArray and
+ * creates a new div for each product. The divs are added to the prodCont div.
+ */
 function showProducts(){
     const prodCont = document.getElementById('prod-container')
     for (let product of productsArray){

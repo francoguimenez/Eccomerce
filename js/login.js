@@ -2,8 +2,12 @@ const email = document.getElementById('floatingInput')
 const password = document.getElementById('floatingPassword')
 const button = document.getElementsByClassName('boton')
 
+/* Adding an event listener to the button. */
 boton.addEventListener('click', submitCheck);
 
+/**
+ * If the password and email fields are not empty, then redirect to main.html.
+ */
 function submitCheck() {
     if ((password.value.length > 0) && (email.value.length > 0)) {
         redirige()
