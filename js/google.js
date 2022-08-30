@@ -1,5 +1,6 @@
+
 /**
- * A callback function that is called when a user signs in.
+ * A function that is called when the user signs in.
  * @param googleUser - The GoogleUser object that represents the user who just signed in.
  */
 function onSignIn(googleUser) {

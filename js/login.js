@@ -2,7 +2,6 @@ const email = document.getElementById('floatingInput')
 const password = document.getElementById('floatingPassword')
 const button = document.getElementsByClassName('boton')
 
-/* Adding an event listener to the button. */
 boton.addEventListener('click', submitCheck);
 
 /**
@@ -10,15 +9,29 @@ boton.addEventListener('click', submitCheck);
  */
 function submitCheck() {
     if ((password.value.length > 0) && (email.value.length > 0)) {
-        redirige()
+        window.location.href ='main.html'
     } else {
         alert('fail');
     }
+
+   /* Saving the email and password in local storage. */
+    let usuario = { // creando un array usuario que contenga, el valor de input del mail y del password
+        mail: document.getElementById("floatingInput").value,
+        passw: document.getElementById("floatingPassword").value
+    }
     
+    //setea un item de nombre logueado de valor true, y verifica si estamos logueados
+    // localStorage.setItem("Logueado", true);
+    //estamos seteando los valores del array usuario, en JSON
+    localStorage.setItem("correo", JSON.stringify(usuario));
+    // return true;
+
 }
-function redirige() {
-    window.location.href = 'main.html';
-}
+
+// function redirige() {
+
+//     window.location.href = 'main.html';
+// }
 
 // const Login = document.getElementById('formLogin')
 // button.addEventListener('submit', checkForm)
